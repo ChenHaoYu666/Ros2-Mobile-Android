@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/ros2_settings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROS2 Settings"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/domain_id_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:hint="ROS_DOMAIN_ID"
+            app:layout_constraintTop_toBottomOf="@id/ros2_settings_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/save_domain_button">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/domain_id_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/save_domain_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="保存并重启"
+            app:layout_constraintTop_toBottomOf="@id/ros2_settings_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/save_domain_button" />
+
+        <Button
+            android:id="@+id/topic_list_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="话题列表 (ros2 topic list)"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <!-- 监视区容器 (RecyclerView 用于承载多个卡片) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/monitor_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/topic_list_button" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/topic_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/black02dp"
+            android:minHeight="200dp"
+            android:padding="4dp"
+            app:layout_constraintTop_toBottomOf="@id/monitor_recycler_view" />
+
+        <TextView
+            android:id="@+id/topic_list_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/black02dp"
+            android:minHeight="200dp"
+            android:padding="8dp"
+            android:text="点击按钮获取话题..."
+            android:textColor="@color/whiteHigh"
+            android:fontFamily="monospace"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/topic_recycler_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

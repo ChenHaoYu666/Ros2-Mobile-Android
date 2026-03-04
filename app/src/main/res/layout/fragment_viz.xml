@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black00dp">
+
+    <!-- The widget container is now the main background -->
+    <com.example.ros2_android_test_app.ui.fragments.viz.WidgetViewGroup
+        android:id="@+id/widget_groupview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp" />
+
+    <!-- Edit Mode Toggle -->
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/edit_viz_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="EDIT"
+        android:textColor="@color/whiteHigh"
+        android:textStyle="bold"
+        app:thumbTint="@color/colorAccent"
+        app:trackTint="@color/whiteMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

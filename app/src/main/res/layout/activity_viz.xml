@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 顶部标题栏 -->
+    <TextView
+        android:id="@+id/vizTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="ROS2 VIZ"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="#3F51B5"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 返回按钮（左上角） -->
+
+    <!-- 可视化主画布 -->
+    <com.example.ros2_android_test_app.VizMapView
+        android:id="@+id/vizMapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 右下角 Joystick 控制区，叠加在 VizMapView 上方 -->
+    <com.example.ros2_android_test_app.JoystickView
+        android:id="@+id/vizJoystickView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vizMapView"
+        app:layout_constraintEnd_toEndOf="@+id/vizMapView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

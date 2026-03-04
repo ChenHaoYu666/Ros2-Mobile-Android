@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <TextView
+        android:id="@+id/detailsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#1F1F1F"
+        android:padding="8dp"
+        android:text="DETAILS"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Joystick 配置 -->
+    <TextView
+        android:id="@+id/joyTopicLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Joystick Topic"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsTitle" />
+
+    <EditText
+        android:id="@+id/joyTopicEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="/cmd_vel"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:backgroundTint="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joyTopicLabel" />
+
+    <TextView
+        android:id="@+id/joyMaxLinearLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Max Linear (m/s)"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joyTopicEdit" />
+
+    <EditText
+        android:id="@+id/joyMaxLinearEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="numberDecimal"
+        android:hint="0.5"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:backgroundTint="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joyMaxLinearLabel" />
+
+    <TextView
+        android:id="@+id/joyMaxAngularLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Max Angular (rad/s)"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joyMaxLinearEdit" />
+
+    <EditText
+        android:id="@+id/joyMaxAngularEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="numberDecimal"
+        android:hint="1.0"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:backgroundTint="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joyMaxAngularLabel" />
+
+    <Button
+        android:id="@+id/saveJoyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Save Joystick"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joyMaxAngularEdit"
+        android:layout_marginStart="16dp" />
+
+    <!-- Button Widget 配置 -->
+    <TextView
+        android:id="@+id/btnTopicLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Button Topic"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveJoyBtn" />
+
+    <EditText
+        android:id="@+id/btnTopicEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="/button_cmd"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:backgroundTint="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTopicLabel" />
+
+    <TextView
+        android:id="@+id/btnMsgLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Button Message"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTopicEdit" />
+
+    <EditText
+        android:id="@+id/btnMsgEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="button_pressed"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:backgroundTint="#333333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMsgLabel" />
+
+    <Button
+        android:id="@+id/saveBtnConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Save Button"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#333333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMsgEdit"
+        android:layout_marginStart="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

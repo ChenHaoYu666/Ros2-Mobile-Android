@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    app:cardBackgroundColor="@color/black01dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/monitor_topic_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/topic"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/close_monitor_btn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:tint="@color/delete_red" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/monitor_data_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:text="等待消息..."
+            android:textColor="@color/whiteHigh" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

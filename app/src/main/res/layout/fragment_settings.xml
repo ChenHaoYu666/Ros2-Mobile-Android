@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <TextView
+        android:id="@+id/domainIdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Domain ID:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <EditText
+        android:id="@+id/domainIdEdit"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="0"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:backgroundTint="#333333"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/domainIdLabel"
+        app:layout_constraintStart_toEndOf="@+id/domainIdLabel" />
+
+    <Button
+        android:id="@+id/saveDomainIdBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Domain"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#333333"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBaseline_toBaselineOf="@+id/domainIdEdit"
+        app:layout_constraintStart_toEndOf="@+id/domainIdEdit" />
+
+    <TextView
+        android:id="@+id/effectiveDomainLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="当前生效 Domain ID: --"
+        android:textColor="#B3E5FC"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/domainIdLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
