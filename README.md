@@ -16,7 +16,7 @@
   - map (地图、机器人位姿、激光雷达数据显示)
 - Master 页支持话题发现与监控
   
- <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/123.jpg" width="210px"> <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/123.jpg" width="210px">
+ <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/123.jpg" width="210px"> <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/viz.jpg" width="210px"> <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/details.jpg" width="210px"> <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/ssh.jpg" width="210px">
 
 
 ## 环境要求
