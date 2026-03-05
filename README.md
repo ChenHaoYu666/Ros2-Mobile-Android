@@ -13,15 +13,10 @@
   - Joystick（`geometry_msgs/msg/Twist`）
   - Button（`std_msgs` 多基础类型）
   - Label（多基础类型订阅显示）
-- Master 页支持话题发现与监视
+  - map (地图、机器人位姿、激光雷达数据显示)
+- Master 页支持话题发现与监控
+![界面](https://github.com/user-attachments/assets/8138d94d-8ad2-460e-a3e9-9218b938d6cf)
 
-## 参考来源
-
-本项目参考了以下开源项目（ROS1）：
-
-- [ROS-Mobile-Android-master](https://github.com/ROS-Mobile/ROS-Mobile-Android)
-
-感谢原项目作者在架构、UI 组织与移动端 ROS 交互方面的工作。
 
 ## 环境要求
 
@@ -67,6 +62,13 @@
 - ROS-Mobile-Android（ROS1）项目贡献者
 - ROS2 与 rcljava 社区
 
+## 参考来源
+
+本项目参考了以下开源项目（ROS1）：
+
+- [ROS-Mobile-Android-master](https://github.com/ROS-Mobile/ROS-Mobile-Android)
+
+感谢原项目作者在架构、UI 组织与移动端 ROS 交互方面的工作。
 ## License
 
 本项目采用 **Apache License 2.0**，详见仓库根目录 `LICENSE` 文件。
