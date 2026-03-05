@@ -37,17 +37,6 @@
 - 建议优先与 ROS2 Humble 环境配套使用。
 - 其他 ROS2 版本（如 Iron/Jazzy）在部分 Topic 场景可能可互通，但不保证完全兼容；如需稳定支持，建议使用对应版本重新编译一套 Android 依赖。
 
-## 构建前准备（重要）
-
-在运行源码构建之前，请先准备 ROS2 Android 相关二进制依赖（`.so` / `.jar`），并放置到项目对应目录：
-
-- `app/libs`
-- `app/src/main/jniLibs`
-
-可参考：
-
-- https://github.com/YasuChiba/ros2-android-build
-
 ## 快速开始
 
 ### 方式一：直接下载 Release（推荐）
@@ -65,7 +54,16 @@
    - `app/src/main/jniLibs`
 3. 连接 Android 真机并构建运行。
 4. 在应用中配置 ROS2 Domain ID 与网络环境，进入 Master 页面查看话题。
+## 构建前准备（重要）
 
+在运行源码构建之前，请先准备 ROS2 Android 相关二进制依赖（`.so` / `.jar`），并放置到项目对应目录：
+
+- `app/libs`
+- `app/src/main/jniLibs`
+
+可参考：
+
+- https://github.com/YasuChiba/ros2-android-build
 ## 致谢
 
 - ROS-Mobile-Android（ROS1）项目贡献者
