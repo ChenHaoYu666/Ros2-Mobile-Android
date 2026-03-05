@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -55,16 +56,27 @@ public class DetailsFragment extends Fragment {
         fab.setOnClickListener(this::showAddMenu);
 
         View clearBtn = view.findViewById(R.id.clear_all_btn);
-        clearBtn.setOnClickListener(v -> {
-            WidgetConfigStore.clearAll(requireContext().getApplicationContext());
-            expandedWidgetId = null;
-            refresh();
-            Toast.makeText(getContext(), "Cleared all widgets", Toast.LENGTH_SHORT).show();
-        });
+        clearBtn.setOnClickListener(v -> showClearAllConfirmDialog());
 
         adapter = new WidgetAdapter();
         recyclerView.setAdapter(adapter);
         refresh();
+    }
+
+    private void showClearAllConfirmDialog() {
+        if (getContext() == null) return;
+
+        new AlertDialog.Builder(requireContext())
+                .setTitle("Clear All Widgets")
+                .setMessage("This action will remove all widgets. Are you sure?")
+                .setPositiveButton("Yes", (dialog, which) -> {
+                    WidgetConfigStore.clearAll(requireContext().getApplicationContext());
+                    expandedWidgetId = null;
+                    refresh();
+                    Toast.makeText(getContext(), "Cleared all widgets", Toast.LENGTH_SHORT).show();
+                })
+                .setNegativeButton("No", (dialog, which) -> dialog.dismiss())
+                .show();
     }
 
     private void showAddMenu(View v) {
