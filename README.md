@@ -1,10 +1,8 @@
 # ROS2-Mobile-Android
 
-`ROS2-Mobile-Android` 是一个基于 Android 的 ROS2 移动端控制与可视化应用，面向移动机器人场景，支持在手机端进行话题查看、发布/订阅交互与可视化控件操作。
+`ROS2-Mobile-Android` 是一个基于 Android 的 ROS2 移动端控制与可视化应用，面向移动机器人场景，支持在手机端进行话题查看、发布/订阅交互与可视化控件操作。帮助机器人工程师更好地方便地调试机器人。
 
-本项目**参考并继承自** [ROS-Mobile-Android-master](https://github.com/ROS-Mobile/ROS-Mobile-Android)（ROS1 版本）的整体设计与交互思路，并将核心通信能力迁移到 ROS2 生态。
-
-> 声明：本项目是对 ROS-Mobile-Android-master 的 ROS2 方向实现与扩展，可理解为 ROS-Mobile-Android 的 ROS2 版本实践。
+本项目**参考并继承自** [ROS-Mobile-Android-master](https://github.com/ROS-Mobile/ROS-Mobile-Android)（ROS1 版本）的整体设计与交互思路，并将核心通信能力迁移到 ROS2 生态。基于 ROS2 rcljava 与 FastDDS 中间件进行局域网内原生通信，不依赖 WebSocket 网关，不用配置IP。
 
 ## 项目特性
 
