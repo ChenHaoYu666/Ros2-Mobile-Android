@@ -73,4 +73,8 @@
 
 ## License
 
-本项目遵循仓库中声明的许可证（如有）。如你计划发布，请在仓库根目录补充明确 License 文件。
+本项目采用 **Apache License 2.0**，详见仓库根目录 `LICENSE` 文件。
+
+- License 文本：`http://www.apache.org/licenses/LICENSE-2.0`
+- 项目中涉及的第三方依赖与参考项目（包括 `ROS-Mobile-Android-master`）仍分别遵循其原始许可证声明。
+- 若仓库内个别源文件头部包含独立许可证/版权声明，以对应文件声明为准。
