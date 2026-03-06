@@ -16,7 +16,7 @@
   - map (地图、机器人位姿、激光雷达数据显示)
 - Master 页支持话题发现与监控
   
- <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/123.jpg" width="210px"> <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/viz.jpg" width="210px"> <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/details.jpg" width="210px"> <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/ssh.jpg" width="210px">
+ <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/123.jpg" width="210px"> <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/viz.jpg" width="210px"> <img src="https://github.com/ChenHaoYu666/Ros2-Mobile-Android/blob/main/images/details.jpg" width="210px">
 
 
 ## 环境要求
@@ -36,9 +36,9 @@
 ### 方式一：直接下载 Release（推荐）
 
 1. 打开本仓库的 `Releases` 页面。
-2. 下载与你设备架构匹配的 APK（通常为 `arm64-v8a`）。
+2. 下载与你设备架构匹配的 APK。
 3. 将 APK 安装到 Android 设备并启动。
-4. 在应用中配置 ROS2 Domain ID 与网络环境，进入 Master 页面查看话题。
+4. 在Master 页面中配置 ROS2 Domain ID，点击话题列表即可看到同一局域网中的话题。
 
 ### 方式二：从源码构建
 
