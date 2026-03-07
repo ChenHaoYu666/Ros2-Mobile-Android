@@ -48,14 +48,14 @@
    - `app/src/main/jniLibs`
 3. 连接 Android 真机并构建运行。
 4. 在应用中配置 ROS2 Domain ID 与网络环境，进入 Master 页面查看话题。
+5. 其他 ROS2 版本（如 Iron/Jazzy）在部分 Topic 场景可能可互通，但不保证完全兼容；如需稳定支持，建议使用对应版本重新编译一套 Android 依赖。
 ## 构建前准备（重要）
 
 在运行源码构建之前，请先准备 ROS2 Android 相关二进制依赖（`.so` / `.jar`），并放置到项目对应目录：
-
 - `app/libs`
 - `app/src/main/jniLibs`
-
-可参考：
+可直接从- [https://github.com/ChenHaoYu666/ros2_android_deps](https://github.com/ChenHaoYu666/ros2_android_deps)中下载二进制依赖。
+或者自己编译，可参考：
 
 - https://github.com/YasuChiba/ros2-android-build
 ## 致谢
